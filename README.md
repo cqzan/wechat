@@ -1,6 +1,6 @@
 # wechathelp 
   说明：
-  
+  第一个实现自己想法的python小程序。。
   微信不支持带备注名字的信息群发，用itchat库几行代码就能写一个带备注名的群发脚本。
   自己用tkinter做了个gui,用pyinstaller打包成exe，已测试可用。
   注意事项：

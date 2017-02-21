@@ -8,3 +8,4 @@
   2、把群添加到通讯录。
   3、发送的名字为备注名，无备注名则用昵称发送。
   
+![](https://github.com/cqzan/wechat/blob/master/%E5%BE%AE%E4%BF%A1.png)

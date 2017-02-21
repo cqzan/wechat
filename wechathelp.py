@@ -29,7 +29,7 @@ class Weixingui:
             friend = itchat.search_friends(userName=friend['UserName'])
             itchat.send(sendwish % (friend['RemarkName'] or friend["NickName"]), friend['UserName'])
             time.sleep(1)
-        messagebox.showinfo("SB","发送完毕啦")
+        messagebox.showinfo("发送完毕啦")
 def main():
     d=Weixingui()
     mainloop()

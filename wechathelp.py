@@ -4,18 +4,18 @@ from tkinter import *
 from tkinter import messagebox
 class Weixingui:
     def __init__(self):
-        self.top=Tk()
-        self.top.geometry("600x100")
-        self.top.title("微信群发助手")
-        self.top.columnconfigure(0, minsize=50)
-        self.top.rowconfigure(0, minsize=50)
-        self.groupname = Label(self.top, text="群名").grid(row=0)
-        self.wishname = Label(self.top, text="祝福话语").grid(row=0, column=2)
+        top=Tk()
+        top.geometry("600x100")
+        top.title("微信群发助手")
+        top.columnconfigure(0, minsize=50)
+        top.rowconfigure(0, minsize=50)
+        groupname = Label(top, text="群名").grid(row=0)
+        wishname = Label(top, text="祝福话语").grid(row=0, column=2)
         self.entry_qunming=StringVar()
-        self.grouptext=Entry(self.top,textvariable=self.entry_qunming).grid(row=0,column=1)
+        grouptext=Entry(top,textvariable=self.entry_qunming).grid(row=0,column=1)
         self.entry_wish = StringVar()
-        self.wishtext=Entry(self.top,textvariable=self.entry_wish).grid(row=0,column=3)
-        self.send=Button(self.top,text="发送祝福",command=self.weixin).grid(row=1,column=2,sticky=W)
+        wishtext=Entry(top,textvariable=self.entry_wish).grid(row=0,column=3)
+        send=Button(top,text="发送祝福",command=self.weixin).grid(row=1,column=2,sticky=W)
 
     def weixin(self):
         wish=self.entry_wish.get()
@@ -29,7 +29,7 @@ class Weixingui:
             friend = itchat.search_friends(userName=friend['UserName'])
             itchat.send(sendwish % (friend['RemarkName'] or friend["NickName"]), friend['UserName'])
             time.sleep(1)
-        messagebox.showinfo("发送完毕啦")
+        messagebox.showinfo("SB","发送完毕啦")
 def main():
     d=Weixingui()
     mainloop()
